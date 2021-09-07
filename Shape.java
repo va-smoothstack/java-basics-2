@@ -1,18 +1,11 @@
 // Java Basics 2 - Assignment 3
+//package util;
+
 public interface Shape {
     public double calculateArea();
 
     public void display(); 
 
-    public static void main(String[] args) {
-        Triangle t = new Triangle(10, 4); // Triangle with height 10 and base 4
-        Square s = new Square(5); // Square with side lengths 5
-        Circle c = new Circle(4); // Circle with radius 4
-        // Display all shapes' different area's
-        t.display();
-        s.display();
-        c.display();
-    }
 }
 
 class Square implements Shape {
@@ -31,6 +24,11 @@ class Square implements Shape {
     public void display() {
         System.out.println("Area of square: " + this.calculateArea());
     }
+
+    public static void main(String[] args) {
+        Square s = new Square(5); // Square with side lengths 5
+        s.display();
+    }
 }
 
 class Circle implements Shape {
@@ -48,6 +46,11 @@ class Circle implements Shape {
     @Override
     public void display() {
         System.out.println("Area of circle: " + this.calculateArea());        
+    }
+
+    public static void main(String[] args) {
+        Circle c = new Circle(4); // Circle with radius 4
+        c.display();
     }
 }
 
@@ -68,5 +71,10 @@ class Triangle implements Shape {
     @Override
     public void display() {
         System.out.println("Area of triangle: " + this.calculateArea());        
+    }
+
+    public static void main(String[] args) {
+        Triangle t = new Triangle(10, 4); // Triangle with height 10 and base 4
+        t.display();
     }
 }
